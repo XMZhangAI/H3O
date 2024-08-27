@@ -1,0 +1,15 @@
+/Users/xuemuqiangu/Desktop/C#康复机器人源程序/Test/bin/x86/Debug/Test.exe.config
+/Users/xuemuqiangu/Desktop/C#康复机器人源程序/Test/bin/x86/Debug/Test.exe
+/Users/xuemuqiangu/Desktop/C#康复机器人源程序/Test/bin/x86/Debug/Test.pdb
+/Users/xuemuqiangu/Desktop/C#康复机器人源程序/Test/bin/x86/Debug/MathNet.Numerics.dll
+/Users/xuemuqiangu/Desktop/C#康复机器人源程序/Test/bin/x86/Debug/MathNet.Numerics.xml
+/Users/xuemuqiangu/Desktop/C#康复机器人源程序/Test/obj/x86/Debug/Test.csproj.AssemblyReference.cache
+/Users/xuemuqiangu/Desktop/C#康复机器人源程序/Test/obj/x86/Debug/Test.Frmbc.resources
+/Users/xuemuqiangu/Desktop/C#康复机器人源程序/Test/obj/x86/Debug/Test.FrmDebug.resources
+/Users/xuemuqiangu/Desktop/C#康复机器人源程序/Test/obj/x86/Debug/Test.FrmMain.resources
+/Users/xuemuqiangu/Desktop/C#康复机器人源程序/Test/obj/x86/Debug/Test.Properties.Resources.resources
+/Users/xuemuqiangu/Desktop/C#康复机器人源程序/Test/obj/x86/Debug/Test.csproj.GenerateResource.cache
+/Users/xuemuqiangu/Desktop/C#康复机器人源程序/Test/obj/x86/Debug/Test.csproj.CoreCompileInputs.cache
+/Users/xuemuqiangu/Desktop/C#康复机器人源程序/Test/obj/x86/Debug/Test.csproj.CopyComplete
+/Users/xuemuqiangu/Desktop/C#康复机器人源程序/Test/obj/x86/Debug/Test.exe
+/Users/xuemuqiangu/Desktop/C#康复机器人源程序/Test/obj/x86/Debug/Test.pdb

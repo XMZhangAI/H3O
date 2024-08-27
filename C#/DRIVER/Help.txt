@@ -1,0 +1,4 @@
+
+
+Win7 Win8 64位的：
+DLL  LIB文件在 \DRIVER\AMD64文件夹中

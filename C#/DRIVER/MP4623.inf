@@ -1,0 +1,153 @@
+; Installation INF for the Cypress Generic USB Driver for Windows XP
+; Processor support for x86 based platforms.
+;
+; (c) Copyright 2011 Cypress Semiconductor Corporation
+;  X64 driver wwlab 
+
+[Version]
+Signature="$WINDOWS NT$"
+Class=USB
+ClassGUID={36FC9E60-C465-11CF-8056-444553540000}
+provider=%CYUSB_Provider%
+DriverVer=09/05/2014,3.4.7.0
+CatalogFile=MP4623.cat
+CatalogFile.NTx86=MP4623X86.cat
+CatalogFile.NTIA64=MP4623I64.cat
+CatalogFile.NTAMD64=MP4623X64.cat
+
+[SourceDisksNames]
+1=%CYUSB_Install%,,,
+
+[SourceDisksFiles]
+MP4623.sys = 1
+MP4623.DLL =1
+
+[SourceDisksFiles.amd64]
+MP4623.sys = 1,AMD64
+MP4623.DLL =1,AMD64
+
+
+[DestinationDirs]
+CYUSB.Files.Ext = 10,System32\Drivers
+MP4623.Files.DLL=10,System32
+CYUSB.Files.Ext64 = 10,System32\Drivers
+MP4623.Files.DLL64=10,syswow64
+MP4623.Files2.DLL64=10,System32
+
+
+[ControlFlags]
+ExcludeFromSelect = *
+
+[Manufacturer]
+%CYUSB_Provider%=Device,NT,NTx86,NTamd64
+
+;for all platforms
+[Device]
+%VID_XXXX&PID_XXXX.DeviceDesc%=CyUsb, USB\VID_0548&PID_4623
+
+
+;for windows 2000 non intel platforms
+[Device.NT]
+%VID_XXXX&PID_XXXX.DeviceDesc%=CyUsb, USB\VID_0548&PID_4623
+
+
+;for x86 platforms
+[Device.NTx86]
+%VID_XXXX&PID_XXXX.DeviceDesc%=CyUsb, USB\VID_0548&PID_4623
+
+
+;for x64 platforms
+[Device.NTamd64]
+%VID_XXXX&PID_XXXX.DeviceDesc64%=CyUsb, USB\VID_0548&PID_4623
+
+
+[CYUSB]
+CopyFiles=CYUSB.Files.Ext,MP4623.Files.DLL
+AddReg=CyUsb.AddReg
+
+[CYUSB.HW]
+AddReg=CYUSB.AddReg.Guid
+
+[CYUSB.Services]
+Addservice = CYUSB,2,CYUSB.AddService
+
+[CYUSB.NT]
+CopyFiles=CYUSB.Files.Ext,MP4623.Files.DLL
+AddReg=CyUsb.AddReg
+
+[CYUSB.NT.HW]
+AddReg=CYUSB.AddReg.Guid
+
+[CYUSB.NT.Services]
+Addservice = CYUSB,2,CYUSB.AddService
+
+
+[CYUSB.NTx86]
+CopyFiles=CYUSB.Files.Ext,MP4623.Files.DLL
+AddReg=CyUsb.AddReg
+
+[CYUSB.NTx86.HW]
+AddReg=CYUSB.AddReg.Guid
+
+[CYUSB.NTx86.Services]
+Addservice = CYUSB,2,CYUSB.AddService
+
+;copy  DLL to syswow64 and system32 !!!
+[CYUSB.NTamd64]
+CopyFiles=CYUSB.Files.Ext64,MP4623.Files.DLL64,,MP4623.Files2.DLL64
+AddReg=CyUsb.AddReg
+
+[CYUSB.NTamd64.HW]
+AddReg=CYUSB.AddReg.Guid
+
+[CYUSB.NTamd64.Services]
+Addservice = CYUSB,2,CYUSB.AddService
+
+
+[CYUSB.AddReg]
+; Deprecating - do not use in new apps to identify a CYUSB driver
+HKR,,DevLoader,,*ntkern
+HKR,,NTMPDriver,,MP4623.sys
+; You may optionally include a check for DriverBase in your application to check for a CYUSB driver
+HKR,,DriverBase,,MP4623.sys
+HKR,"Parameters","MaximumTransferSize",0x10001,4096
+HKR,"Parameters","DebugLevel",0x10001,2
+HKR,,FriendlyName,,%CYUSB_Description%
+
+[CYUSB.AddService]
+DisplayName    = %CYUSB_Description%
+ServiceType    = 1                  ; SERVICE_KERNEL_DRIVER
+StartType      = 3                  ; SERVICE_DEMAND_START
+ErrorControl   = 1                  ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %10%\System32\Drivers\MP4623.sys
+AddReg         = CYUSB.AddReg
+LoadOrderGroup = Base
+
+;X86 copy file
+[CYUSB.Files.Ext]
+MP4623.sys
+[MP4623.Files.DLL]
+MP4623.dll
+
+;AMD64 copy file
+[CYUSB.Files.Ext64]
+MP4623.sys
+[MP4623.Files.DLL64]
+MP4623.dll
+[MP4623.Files2.DLL64]
+MP4623.dll
+
+
+[CYUSB.AddReg.Guid]
+HKR,,DriverGUID,,%CYUSB.GUID%
+
+[Strings]
+CYUSB_Provider    = "wwlab"
+CYUSB_Company     = "wwlab co"
+CYUSB_Description = "MP4623 AD"
+CYUSB_DisplayName = "MP4623"
+CYUSB_Install     = "wwlab Disk"
+VID_XXXX&PID_XXXX.DeviceDesc="MP4623 AD V1.3"
+VID_XXXX&PID_XXXX.DeviceDesc64="MP4623 AD V1.7 For Win64"
+CYUSB.GUID="{AE18AA60-7F6A-11d4-97DD-00010229B959}"
+CYUSB_Unused      = "."

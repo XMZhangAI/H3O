@@ -1,0 +1,13 @@
+C:\Users\Administrator\Desktop\C#康复机器人源程序\Test\bin\x86\Release\Test.exe.config
+C:\Users\Administrator\Desktop\C#康复机器人源程序\Test\obj\x86\Release\Test.exe
+C:\Users\Administrator\Desktop\C#康复机器人源程序\Test\obj\x86\Release\Test.pdb
+C:\Users\Administrator\Desktop\C#康复机器人源程序\Test\bin\x86\Release\Test.exe
+C:\Users\Administrator\Desktop\C#康复机器人源程序\Test\bin\x86\Release\Test.pdb
+C:\Users\Administrator\Desktop\C#康复机器人源程序\Test\bin\x86\Release\MathNet.Numerics.dll
+C:\Users\Administrator\Desktop\C#康复机器人源程序\Test\bin\x86\Release\MathNet.Numerics.xml
+C:\Users\Administrator\Desktop\C#康复机器人源程序\Test\obj\x86\Release\Test.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\C#康复机器人源程序\Test\obj\x86\Release\Test.FrmDebug.resources
+C:\Users\Administrator\Desktop\C#康复机器人源程序\Test\obj\x86\Release\Test.FrmMain.resources
+C:\Users\Administrator\Desktop\C#康复机器人源程序\Test\obj\x86\Release\Test.Properties.Resources.resources
+C:\Users\Administrator\Desktop\C#康复机器人源程序\Test\obj\x86\Release\Test.csproj.GenerateResource.Cache
+C:\Users\Administrator\Desktop\C#康复机器人源程序\Test\obj\x86\Release\Test.Frmbc.resources
